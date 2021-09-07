@@ -29,26 +29,17 @@
     <marquee id="notice" class="scroll-title" behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
       <div class="dd">
         <a href="#" target="_blink">
-          <small>
-            <small>
-              <small>
-                <b>
-                  <div id="a"></div>
-                </b>
-              </small>
-            </small>
-          </small>
+          <b>
+            <div id="a"></div>
+          </b>
         </a>
       </div>
     </marquee>
     <script>
       function px() {
-        var body = document.body,
-          html = document.documentElement;
-        var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
-        var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        var height = document.documentElement.clientHeight;
         document.getElementById("a").innerHTML = "*** Latest Notice Appears Here ***";
-        var fs = height * 4.55;
+        var fs = height * 2.5;
         document.getElementById("a").style.fontSize = fs + '%';
         setTimeout(px, 1);
       }
