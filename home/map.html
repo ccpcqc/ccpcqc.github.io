@@ -14,31 +14,34 @@
         position: absolute;
         width: 100%;
         padding: 0;
-        margin: 0;
-        text-align: center;
+        margin:0;
         border: 0;
+        top: 30px;
       }
 
       .dmaptxt {
+        position: absolute;
         width: 100%;
-        height: 30px;
+        height: 20%;
         color: rgb(250, 250, 250);
         padding: 2px;
+        text-align: center;
         margin: 0px;
         text-align: center;
+        top: 0%;
       }
 
       iframe {
-        /*height: calc(100% - 30px);*/
-        height: 97%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <div id="dmap" class="dmap">
-      <div id="dmaptxt" class="dmaptxt">
+    <div id="dmaptxt" class="dmaptxt">
         <b><span class="glyphicon glyphicon-map-marker"> Find Us In Google Maps</span></b>
       </div>
+    <div id="dmap" class="dmap">
+      
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14755.39573660543!2d91.8150826!3d22.3970517!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb94c0bcd71bf2239!2sChattogram+Cantonment+Public+College!5e0!3m2!1sen!2sbd!4v1561577208484!5m2!1sen!2sbd" width="100%" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <script>
