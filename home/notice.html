@@ -4,46 +4,48 @@
     <style>
       body {
         background-color: white;
-        color: black;
+        --bg: #000;
+        color: var(--bg);
       }
 
-      .dd a:link,
-      a:visited {
-        background-color: white;
-        color: black;
-        padding: 0px;
-        text-align: center;
+      body:hover {
+        background: linear-gradient(45deg, gray, black, gray);
+        --bg: #fff;
+        color: var(--bg);
+      }
+
+      .notice {
+        font-size: 55vh;
         text-decoration: none;
         display: inline-block;
-        border-radius: 4px;
       }
 
-      .dd a:hover,
+      .notice a:link,
+      a:visited {
+        background: transparent;
+        color: var(--bg);
+      }
+
+      .notice a:hover,
       a:active {
-        background-color: black;
-        color: white;
+        /*background: linear-gradient(45deg, gray, black, gray);
+        color: white;*/
+        background: transparent;
+        color: var(--bg);
+        padding: 0px;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body onload='location.href="#a"'>
-    <marquee id="notice" class="scroll-title" behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
-      <div class="dd">
-        <a href="#" target="_blink">
+    <marquee behavior="scroll" direction="left" width="100%" onmouseover="this.stop();" onmouseout="this.start();">
+      <div id="a" class="notice">
+        <a href="#a">
           <b>
-            <div id="a"></div>
+            *** Latest Notice Appears Here ***
           </b>
         </a>
       </div>
     </marquee>
-    <script>
-      function px() {
-        var height = document.documentElement.clientHeight;
-        document.getElementById("a").innerHTML = "*** Latest Notice Appears Here ***";
-        var fs = height * 3;
-        document.getElementById("a").style.fontSize = fs + '%';
-        setTimeout(px, 1);
-      }
-      px();
-    </script>
   </body>
 </html>
