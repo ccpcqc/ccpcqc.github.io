@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    html, body {
+      background: transparent;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+      .border {
+        position: relative;
+        font-size: 4vw;
+        animation: blink 0.8s steps(1) infinite 0s;
+      }
+      #welcome {
+        font-size: 4vw;
+      }
+      @keyframes blink {
+        0%, 100% {border-top: 4vw solid white; border-left: 0.5vw solid white;}
+        50% {border-top: 4vw solid transparent; border-left: 0.5vw solid transparent;}
+      }
+    </style>
+  </head>
+<body>
+
+<b id="welcome"></b><i class="border"></i>
+<script>
+var i = 0;
+var txt = 'Welcome to CCPC Quiz Club Official Website';
+
+function typing() {
+  if (i < txt.length) {
+    document.getElementById("welcome").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typing, 100);
+  }
+}
+function delay() {
+  setTimeout(typing, 2300)
+}
+delay();
+</script>
+</body>
+</html>
