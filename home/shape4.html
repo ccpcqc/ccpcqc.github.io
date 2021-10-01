@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body {
+			height: 100vh;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#shape {
+			position: relative;
+			transform: translate(47%, 62%) rotate(15deg) scale(2.4);
+			border: 0;
+			z-index: 0;
+		}
+
+		#msg {
+			position: fixed;
+			text-align: center;
+			font-size: 8vw;
+			width: 50vw;
+			overflow: hidden;
+			color: #ffffff;
+			transform: translate(54%, 85%);
+			background: transparent;
+			z-index: 2;
+			transition: all 0.3s;
+		}
+		body:hover #msg {
+			color: #fff;
+			transform: translate(54%, 85%) scale(1.2);
+		}
+		svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+	</style>
+</head>
+<body>
+	<div id="msg">Quest<br/>for<br/>Knowledge</div>
+	<div id="shape">
+	<svg viewBox="0 0 600 480">
+		<path fill="#5c7da8" fill-opacity="1" d="M 105 94 C 15 122 47 251 156 231 Q 159 247 134 258 Q 172 256 183 226 Q 226 222 234 187 C 292 136 238 51 174 77 Q 132 53 105 95 "></path>
+	</svg>
+	</div>
+</body>
+</html>
