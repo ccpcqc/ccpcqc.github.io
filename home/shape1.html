@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html,
+    body {
+      height: var(--h);
+      width: var(--w);
+      margin: 0;
+      --h: calc(100% - 4px);
+      --w: calc(100% - 7px);
+      --h2: calc(50% - 4px);
+      --w2: calc(50% - 7px);
+      --r: 20vw;
+      --s1: skew(36deg, 36deg);
+      --s2: skew(-36deg, -36deg);
+    }
+
+    .one {
+      background-color: #5c7da8;
+      position: relative;
+      width: 50%;
+      height: 75%;
+      border: 0;
+      z-index: 1000;
+    }
+
+    .two {
+      background-color: #5c7da8;
+      position: relative;
+      width: 50%;
+      height: 75%;
+      border: 0;
+      margin: 0px;
+      z-index: 1000;
+    }
+
+    .up {
+      content: '';
+      position: absolute;
+      width: var(--r);
+      height: var(--r);
+      background-color: #5c7da8;
+      transform: rotate(-45deg) var(--s1);
+      transform-origin: left top;
+      top: 0%;
+      z-index: -1000;
+    }
+
+    .down {
+      content: '';
+      position: absolute;
+      width: var(--r);
+      height: var(--r);
+      background-color: #5c7da8;
+      transform: rotate(45deg) var(--s2);
+      transform-origin: left bottom;
+      bottom: 0%;
+      //bottom: var(--bs);
+      z-index: -1000;
+    }
+
+    .main {
+      position: relative;
+      height: var(--h);
+      width: 100%;
+      border: 0;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-contents: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="one">
+      <div class="up"></div>
+      <div class="down"></div>
+    </div>
+    <div class="two">
+      <div class="up"></div>
+      <div class="down"></div>
+    </div>
+  </div>
+</body>
+
+</html>
