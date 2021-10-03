@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      html, body {
+        height:  100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background: white;
+        color: black;
+      }
+      .main {
+        font-size: 3vw;
+        white-space: nowrap;
+        border: 0vw solid black;
+        text-align: center;
+        animation: marquee 15s linear infinite 0s;
+      }
+      @keyframes marquee {
+        0% {transform: translateX(100vw);}
+        100% {transform: translateX(-200vw);}
+      }
+      span {
+        margin-right: 130vw;
+      }
+    </style>
+  </head>
+  <body onmouseover="HOVER_IN()" onmouseout="HOVER_OUT()">
+    <div id="main" class="main">
+      <span>**First notice**</span>
+      <span>**Second notice**</span>
+    </div>
+    <script>
+      function HOVER_IN() {
+        document.getElementById("main").setAttribute("style", "animation-play-state: paused;")
+      }
+      function HOVER_OUT() {
+        document.getElementById("main").setAttribute("style", "animation-play-state: running;")
+      }
+    </script>
+  </body>
+</html>
