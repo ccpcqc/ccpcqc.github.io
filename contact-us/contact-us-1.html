@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" intagrity="sha384-wvfxpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: cursive;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-attachment: fixed;
+            }
+            .container {
+                position: relative;
+                width: 1000px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0;
+            }
+            .container .card {
+                position: relative;
+                background: #fff;
+                display: flex;
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .container .card .imgBx {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background: radial-gradient(circle at 30% 107%, #ff0000 0%, #16883c 5%, #42ac91e1 45%, #14f2fa 60%, #0745ffab 90%);
+                backdrop-filter: blur(20px);
+                height: calc(100% - 20px);
+                width: calc(100% - 20px);
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 20px;
+                border: 1px solid rgba(255,255,255,0.2);
+                box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+                transition: 0.7s ease-in-out;
+            }
+            .container .card:hover .imgBx {
+                height: 10px;
+                width: 0px;
+                left: -75;
+                top: calc(50% - 10px);
+            }
+            .container .card .imgBx img {
+                max-width: 100px;
+                filter: invert(-1);
+                transition: 0.5s ease-in-out;
+            }
+            .container .card:hover .imgBx img {
+                max-width: 75px;
+            }
+            .container .card .content {
+                position: absolute;
+                right: 0;
+                margin-left: 30px;
+                margin-right: 30px;
+                width: calc(100% - 75px);
+                height: 100%;
+                padding: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container .card .content h3 {
+                color: #ff0057;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+            .container .card .content a {
+                display: inline-block;
+                padding: 8px 20px;
+                border-radius: 5px;
+                background: #0095ff;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <h1><big><big><big><big><i style="color: rgb(255, 255, 255);" class="fa fa-map-marker" aria-hidden="true"></i></big></big></big></big></h1>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3><i class="fa fa-map-marker" aria-hidden="true"> Address</i></h3>
+                        <p>Get our location on G-maps</p>
+                        <a href="https://www.google.com/maps?ll=22.397471,91.814352&z=15&t=m&hl=en&gl=BD&mapclient=embed&cid=13352059972251230777">Bayazid Bostami Rd, Chattogram 4210</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function responsive() {
+                var height =  document.documentElement.clientHeight;
+                document.getElementById("container").style.height = height + 'px';
+                setTimeout(responsive, 1);
+            }
+            responsive();
+        </script>
+    </body>
+</html>
