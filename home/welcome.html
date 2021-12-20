@@ -24,6 +24,20 @@
         0%, 100% {border-top: 4vw solid white; border-left: 0.5vw solid white;}
         50% {border-top: 4vw solid transparent; border-left: 0.5vw solid transparent;}
       }
+      @media screen and (min-width: 700px) {
+        #welcome {font-size: 3vw;}
+        @keyframes blink {
+          0%, 100% {border-top: 3vw solid white; border-left: 0.375vw solid white;}
+          50% {border-top: 3vw solid transparent; border-left: 0.375vw solid transparent;}
+        }
+      }
+      @media screen and (min-width: 800px) {
+        #welcome {font-size: 2vw;}
+        @keyframes blink {
+          0%, 100% {border-top: 2vw solid white; border-left: 0.25vw solid white;}
+          50% {border-top: 2vw solid transparent; border-left: 0.25vw solid transparent;}
+        }
+      }
     </style>
   </head>
 <body>
